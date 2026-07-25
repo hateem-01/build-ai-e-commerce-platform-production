@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build AI E-Commerce Platform — Digital FTE Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header className="navbar">
+        <div className="nav-container">
+            <div className="logo">
+                <span className="logo-icon">⚡</span>
+                <span className="logo-text">Build AI E-Commerce Platform</span>
+            </div>
+            <nav className="nav-links">
+                <a href="#products">Products</a>
+                <a href="#features">Features</a>
+                <a href="#analytics">Analytics</a>
+            </nav>
+            <div className="cart-badge" id="cart-btn">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </div>
+        </div>
+    </header>
+
+    <section className="hero">
+        <div className="hero-content">
+            <span className="badge">AI-Powered E-Commerce Platform</span>
+            <h1>Enterprise Storefront Built by Digital FTE</h1>
+            <p>High-performance, modern online storefront featuring real-time product catalogs, shopping cart state management, and seamless FastAPI backend integration.</p>
+            <div className="hero-buttons">
+                <a href="#products" className="btn primary">Explore Products</a>
+                <a href="http://localhost:8000/docs" target="_blank" className="btn secondary">API Documentation ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" className="products-section">
+        <h2 className="section-title">Featured Products Catalog</h2>
+        <div className="product-grid" id="product-grid">
+            <!-- Dynamically populated by app.js -->
+        </div>
+    </section>
+
+    <div className="cart-modal" id="cart-modal">
+        <div className="cart-content">
+            <div className="cart-header">
+                <h3>Shopping Cart</h3>
+                <span className="close-btn" id="close-cart">&times;</span>
+            </div>
+            <div id="cart-items" className="cart-items">
+                <p className="empty-msg">Your cart is empty.</p>
+            </div>
+            <div className="cart-footer">
+                <div className="total-price">Total: $<span id="cart-total">0.00</span></div>
+                <button className="btn primary" id="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
